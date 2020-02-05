@@ -6,7 +6,7 @@ function Game({ teams, scores, day }) {
     const [team1, team2] = teams;
     const [score1, score2] = scores;
 
-    let matchDay = day;
+    const matchDay = day;
 
     const EQUAL = 'EQUAL';
     const WIN_POINTS = 3;
