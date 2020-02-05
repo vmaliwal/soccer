@@ -1,7 +1,17 @@
-// Run the app by invoking this file
+const { matchService, matchResultDisplayService} = require('./src/service/');
 
-const main = () => {
-    console.log("Hi, I am here");
+/**
+ * Entry point
+ */
+const main = async () => {
+    const { results } = await matchService();
+    const matches = await results();
+    
+    const { display } = await matchResultDisplayService(matches);
+    const output = await display();
+
+    console.log(output);
+    
 }
 
 module.exports.init = main();

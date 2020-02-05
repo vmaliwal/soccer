@@ -1,5 +1,5 @@
-const games = require('./matchesData');
+const gamesData = require('./matchesData');
 
 module.exports = {
-    games
+    gamesData
 }
