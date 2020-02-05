@@ -8,8 +8,12 @@ const readFile = require('./util/readFileStream');
  * 
  */ 
 function createMatchStream() {
-    const stream = fs.createReadStream(inputFilePath);
-    return readFile(stream)
+    try {
+        const stream = fs.createReadStream(inputFilePath);
+        return readFile(stream)
+    } catch {
+        throw new Error("File not found");
+    }
 }
 
 module.exports = createMatchStream
