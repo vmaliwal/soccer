@@ -23,7 +23,7 @@ function MatchResultDisplayService(m) {
             const top3teams = sortedTeams.slice(0,3);
     
             top3teams.forEach(team => {
-                result += `${team.getName()}, ${team.points} ${(team.pts > 1) ? "pts" : "pt"} \n`;
+                result += `${team.getName()}, ${team.points} ${(team.points > 1) ? "pts" : "pt"} \n`;
             })
     
         });

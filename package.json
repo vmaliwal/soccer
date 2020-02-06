@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "ora": "^4.0.3"
   }
 }
