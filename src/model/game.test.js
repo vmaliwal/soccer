@@ -1,6 +1,4 @@
-const Game = require('./game');
-const Team = require('./team');
-const Score = require('./score');
+const { Game, Team, Score } = require('./');
 
 describe('Game', () => {
     let game;

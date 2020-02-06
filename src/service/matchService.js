@@ -95,7 +95,8 @@ function MatchService() {
     }
 
     return {
-        results
+        results,
+        _sanitizeStream
     }
 
 }

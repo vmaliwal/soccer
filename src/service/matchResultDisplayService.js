@@ -7,7 +7,7 @@ function MatchResultDisplayService(m) {
     let matches = m
 
     /**
-     * Display result on console
+     * Generate a report to display on console
      */
     function display() {
         const keys = Object.keys(matches);
@@ -33,19 +33,21 @@ function MatchResultDisplayService(m) {
 
     /**
      * Sort by points in descending. If points are equal, sort by name in ascending
-     * @param {Array} games 
+     * @param {Array} teams 
      */
-    function _sort(games) {
-        games.sort((team1, team2) => {
+    function _sort(teams) {
+        teams.sort((team1, team2) => {
             if (team1.points > team2.points) return -1;
             else if (team1.points < team2.points) return 1;
-            else (team1.name > team2.name) ? 1 : -1
+            else if (team1.getName() > team2.getName()) return 1;
+            else return -1;
         })
-        return games;
+        return teams;
     }
 
     return {
-        display
+        display,
+        _sort
     }
 
 }
