@@ -7,7 +7,7 @@ const { matchService, matchResultDisplayService} = require('./src/service/');
  */
 const main = async () => {
 
-    const spinner = ora('Welcome to Jane Tech League Results').start();
+    const spinner = ora('Welcome to Soccer League Results').start();
 
     setTimeout(() => {
         spinner.color = 'yellow';
